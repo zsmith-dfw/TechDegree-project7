@@ -7,8 +7,8 @@ const PhotoContainer = props => {
   const results = props.data
 
   let photos = results.map(photo => {
-    const urlSource = {`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} 
-    <Photo url={urlSource}/>
+    const urlSource = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg` 
+   return (<Photo url={urlSource}/>)
   })
 
           
