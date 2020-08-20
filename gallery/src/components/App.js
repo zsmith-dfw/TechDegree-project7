@@ -24,15 +24,20 @@ export default class App extends Component {
    
   }
   componentDidMount() {
-    axios.get('https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=219f6801dd3486cf7fea71957aaf1195&tags=sunsets&per_page=24&format=json&nojsoncallback=1')
-  .then(response => {
-    this.setState({
-      photos: response.data.photos.photo
+    this.searchPhotos()
+  }
+
+  searchPhotos = (query='planes') => {
+    axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=219f6801dd3486cf7fea71957aaf1195&tags=${query}&per_page=24&format=json&nojsoncallback=1`)
+    .then(response => {
+      this.setState({
+        photos: response.data.photos.photo
+      })
     })
-  })
-  .catch(error => {
-    console.log('Error fetching and parsing data', error);
-  });
+    .catch(error => {
+      console.log('Error fetching and parsing data', error);
+    });
+
   }
 
 
@@ -41,7 +46,7 @@ export default class App extends Component {
     return(
       <BrowserRouter>
       <div className="container">
-      <Search />
+      <Search search={this.searchPhotos}/>
       <Nav />
       <Switch>
         <Route exact path="/planes" render={ () => <Planes title='Planes' /> } />
