@@ -8,8 +8,12 @@ const PhotoContainer = props => {
 
   let photos = results.map(photo => {
     const urlSource = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_m.jpg` 
-   return (<Photo url={urlSource}/>)
+   return (<Photo url={urlSource}
+                  key={photo.id}
+   />)
   })
+
+  console.log(props)
 
           
 
@@ -26,4 +30,9 @@ const PhotoContainer = props => {
 
 
 export default PhotoContainer
+
+
+
+
+
 

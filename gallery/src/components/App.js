@@ -8,18 +8,19 @@ import Nav from "./Nav"
 import Search from "./Search"
 import NotFound from './NotFound';
 import PhotoContainer from './PhotoContainer'
+import Categories from './Categories'
 // import apiKey from './config'
 import axios from 'axios'
-import Planes from "./Planes"
-import Trains from './Trains';
-import Automobiles from './Automobiles'
+
 
 
 export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      photos: []
+      photos: [
+        
+      ]
     }
    
   }
@@ -40,18 +41,25 @@ export default class App extends Component {
 
   }
 
+testMethod() {
+  console.log('just a test')
+}
+
 
   render() {
+
+
+    
     console.log(this.state.photos)
     return(
       <BrowserRouter>
       <div className="container">
       <Search search={this.searchPhotos}/>
-      <Nav />
+ 
       <Switch>
-        <Route exact path="/planes" render={ () => <Planes title='Planes' /> } />
-        <Route exact path="/trains" render={ () => <Trains title='Trains' /> } />
-        <Route exact path="/automobiles" render={ () => <Automobiles title='Automobiles' /> } />
+      <Nav />
+      <Route path="/" component={Categories} testing={this.testMethod()}/>
+
         <Route component={NotFound} />
       </Switch>
         
@@ -61,8 +69,9 @@ export default class App extends Component {
 
     )
   }
+
+
+
+  
 }
-
-
-
 
