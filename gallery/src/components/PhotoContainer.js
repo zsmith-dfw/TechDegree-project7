@@ -18,10 +18,12 @@ const PhotoContainer = props => {
           
 
       return(
-        <ul className="photo-container">
+      <div className="photo-container">
         <h2>Results</h2>
+        <ul>
         {photos} 
         </ul>
+        </div>
       )
     }
   
