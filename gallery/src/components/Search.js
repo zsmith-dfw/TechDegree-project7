@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import history from './history'
+
+
 
 export default class Search extends Component {
   state = {
@@ -13,6 +16,10 @@ export default class Search extends Component {
     e.preventDefault();
     this.props.search(this.query.value);
     e.currentTarget.reset();
+    let searchQuery = this.searchtext;
+    let path = `/${searchQuery}`;
+
+    history.push(path);
   };
 
   render() {
@@ -42,3 +49,5 @@ export default class Search extends Component {
     );
   }
 }
+
+
