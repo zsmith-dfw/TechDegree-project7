@@ -7,18 +7,11 @@ import apiKey from "./config";
 import axios from "axios";
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      planes: [],
-    };
-    this.state = {
-      trains: [],
-    };
-    this.state = {
-      automobiles: [],
-    };
-  }
+  state = {
+    planes: [],
+    trains: [],
+    automobiles: []
+}
 
   componentDidMount() {
     this.searchPlanes();
