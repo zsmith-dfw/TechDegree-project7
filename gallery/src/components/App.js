@@ -101,7 +101,7 @@ export default class App extends Component {
               render={() => <PhotoContainer data={this.state.automobiles} />}
             />
               <Route
-              path="/search/:query" 
+              exact path="/search/:query" 
               render={() => <PhotoContainer data={this.state.search} />}
             />
             
