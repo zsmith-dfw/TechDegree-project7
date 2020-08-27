@@ -16,7 +16,7 @@ export default withRouter(class Search extends Component {
     e.preventDefault();
     this.props.search(this.query.value);
     e.currentTarget.reset();
-    let searchQuery = this.state.searchtext;
+    let searchQuery = this.state.searchText;
     let path = `/search/${searchQuery}`;
     this.props.history.push(path);
   };
