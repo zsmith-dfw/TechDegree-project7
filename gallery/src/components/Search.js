@@ -1,7 +1,7 @@
+// We import withRouter in order to access the history prop
+
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom'
-
-
 
 export default withRouter(class Search extends Component {
   state = {

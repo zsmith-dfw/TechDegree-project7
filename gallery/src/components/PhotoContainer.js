@@ -2,6 +2,8 @@ import React from "react";
 import Photo from "./Photo";
 import NotFound from "./NotFound";
 
+// normally we can access the url property of an image but Flickr requires the logic below. More info can be found in their API documentation
+
 const PhotoContainer = (props) => {
   const results = props.data;
   let photos;

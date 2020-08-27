@@ -6,6 +6,8 @@ import PhotoContainer from "./PhotoContainer";
 import apiKey from "./config";
 import axios from "axios";
 
+// each link has their own state
+
 export default class App extends Component {
   state = {
     planes: [],
@@ -13,6 +15,8 @@ export default class App extends Component {
     automobiles: [],
     search: []
 }
+
+// each link has own method for making API call
 
   componentDidMount() {
     this.searchPlanes();
@@ -35,6 +39,7 @@ export default class App extends Component {
         console.log("Error fetching and parsing data", error);
       });
   };
+
   searchTrains = (query = "trains") => {
     axios
       .get(
@@ -49,6 +54,7 @@ export default class App extends Component {
         console.log("Error fetching and parsing data", error);
       });
   };
+
   searchAutomobiles = (query = "automobiles") => {
     axios
       .get(
@@ -104,7 +110,6 @@ export default class App extends Component {
               exact path="/search/:query" 
               render={() => <PhotoContainer data={this.state.search} />}
             />
-            
           </Switch>
         </div>
       </BrowserRouter>
