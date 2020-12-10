@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TechDegree-project7/static/css/main.8325ea2a.chunk.css",
+    "main.js": "/TechDegree-project7/static/js/main.08bd3143.chunk.js",
+    "main.js.map": "/TechDegree-project7/static/js/main.08bd3143.chunk.js.map",
+    "runtime-main.js": "/TechDegree-project7/static/js/runtime-main.51ac4bf6.js",
+    "runtime-main.js.map": "/TechDegree-project7/static/js/runtime-main.51ac4bf6.js.map",
+    "static/js/2.d2d9ec44.chunk.js": "/TechDegree-project7/static/js/2.d2d9ec44.chunk.js",
+    "static/js/2.d2d9ec44.chunk.js.map": "/TechDegree-project7/static/js/2.d2d9ec44.chunk.js.map",
+    "index.html": "/TechDegree-project7/index.html",
+    "precache-manifest.d6b7a0e26b8a6bac61cfc4c4046a05ec.js": "/TechDegree-project7/precache-manifest.d6b7a0e26b8a6bac61cfc4c4046a05ec.js",
+    "service-worker.js": "/TechDegree-project7/service-worker.js",
+    "static/css/main.8325ea2a.chunk.css.map": "/TechDegree-project7/static/css/main.8325ea2a.chunk.css.map",
+    "static/js/2.d2d9ec44.chunk.js.LICENSE.txt": "/TechDegree-project7/static/js/2.d2d9ec44.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51ac4bf6.js",
+    "static/js/2.d2d9ec44.chunk.js",
+    "static/css/main.8325ea2a.chunk.css",
+    "static/js/main.08bd3143.chunk.js"
+  ]
+}
